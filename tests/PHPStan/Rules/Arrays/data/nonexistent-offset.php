@@ -277,4 +277,17 @@ class Foo
 		}
 	}
 
+	private const KEY1 = '1';
+	private const KEY2 = 'foo';
+	public function testDifferentKeyTypes()
+	{
+		$array = [
+		    self::KEY1 => [
+				self::KEY2 => 'bar',
+            ],
+		];
+
+		array_key_exists('1', $array[self::KEY1]);
+	}
+
 }
